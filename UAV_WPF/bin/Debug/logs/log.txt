@@ -1,0 +1,33 @@
+2019-05-02 20:34:11,670 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-02 20:34:11,683 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-02 20:34:11,683 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-02 20:45:23,912 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-02 20:45:23,937 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-02 20:45:23,937 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-02 20:46:02,012 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-02 20:46:02,031 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-02 20:46:02,031 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:22:15,235 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:22:15,321 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:22:15,321 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:27:04,459 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:27:04,483 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:27:04,483 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:29:29,948 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:29:29,975 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:29:29,975 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:31:13,889 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:31:13,914 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:31:13,914 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:37:15,681 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:37:15,736 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:37:15,737 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:43:54,446 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:43:54,488 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:43:54,488 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-03 07:48:10,714 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-03 07:48:10,741 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-03 07:48:10,741 [ 1] ERROR UAV_WPF.App: 测试记录Error日志
+2019-05-04 10:10:43,399 [ 1] INFO  UAV_WPF.App:  == Startup =====================>>> 
+2019-05-04 10:10:43,415 [ 1] DEBUG UAV_WPF.App: 测试记录Debug日志
+2019-05-04 10:10:43,532 [ 1] ERROR UAV_WPF.App: 测试记录Error日志

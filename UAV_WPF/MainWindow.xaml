@@ -1,0 +1,149 @@
+﻿<Window x:Class="UAV_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ibehavior="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:local="clr-namespace:UAV_WPF"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" Height="500" Width="800" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded">
+    <Border Name ="bordername">
+        <Grid Grid.ColumnSpan="2" Background="LightBlue" Name="MainGrid" ShowGridLines="False" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Menu Grid.Row="0" Grid.Column="0">
+                <MenuItem Header="智能控制">
+                    <MenuItem Name="MItakeOff" Click="MItakeOff_Click"  Header="起飞"></MenuItem>
+                    <MenuItem Name="MIland" Click="MIland_Click" Header="降落"></MenuItem>
+                    <MenuItem Name="MIreturn" Click="MIreturn_Click" Header="返航"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="初始化设置">
+                    <MenuItem Name="MIcompassCalibration" Click="MIcompassCalibration_Click" Header="罗盘校准"></MenuItem>
+                    <MenuItem Name="MIaccelerationCalibration" Click="MIaccelerationCalibration_Click" Header="加速度校准"></MenuItem>
+                    <MenuItem Name="MIcontrollerCalibration" Click="MIcontrollerCalibration_Click" Header="遥控器校准"></MenuItem>
+                    <MenuItem Name="MIFlightModeSet" Click="MIFlightModeSet_Click" Header="飞行模式设置"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="查看">
+                    <MenuItem Name="MIflightControlDetails" Click="MIflightControlDetails_Click" Header="飞控详细信息"></MenuItem>
+                    <MenuItem Name="MIflightControlParameters" Click="MIflightControlParameters_Click" Header="当前飞控参数"></MenuItem>
+                    <MenuItem Name="MIdisplayLocation" Click="MIdisplayLocation_Click" Header="显示当前位置"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="设置">
+                    <MenuItem Name="MIdefaultAltitude" Click="MIdefaultAltitude_Click" Header="飞行默认高度"></MenuItem>
+                    <MenuItem Name="MIelectronicFence" Click="MIelectronicFence_Click" Header="电子围栏"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <!--<Slider Grid.Column="1" Grid.Row="0" Maximum="16" Minimum="1" TickFrequency="1"
+                    TickPlacement="Both" IsSnapToTickEnabled="True"></Slider>-->
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button MouseEnter="BtnEditWayPoint_MouseEnter" Click="BtnEditWayPoint_Click" Background="LightBlue" Name="btnEditWayPoint" Content="编辑航点" Margin="5 0 5 0"></Button>
+                <Button Background="LightBlue" Click="BtnReadWayPoint_Click" Name="btnReadWayPoint" Content="读取航点"  Margin="5 0 5 0"></Button>
+                <Button Background="LightBlue" Click="BtnWriteWayPoint_Click" Name="btnWriteWayPoint" Content="写入航点"  Margin="5 0 5 0"></Button>
+                <Button Background="LightBlue" Name="btnClearWayPoint" Content="清除航点"  Click="BtnClearWayPoint_Click" Margin="5 0 5 0"></Button>
+                <Button Background="LightBlue" Click="BtnSaveWayPoint_Click" Name="btnSaveWayPoint" Content="保存航点文件"  Margin="5 0 5 0"></Button>
+                <Button Background="LightBlue" Name="btnOpenWayPoint" Content="打开航点文件"  Margin="5 0 5 0"></Button>
+                <CheckBox Content="添加标注" Margin="5 0 5 0" Name="ckAddMarker" IsChecked="False"></CheckBox>
+                <Button Name="test" Click="Test_Click" Content="测试" Foreground="Red"></Button>
+                <Button Name="ok" Content="确定" Click="Ok_Click"></Button>
+            </StackPanel>
+            <Grid Grid.Column="0" Name="LeftGrid" ShowGridLines="False"  Grid.Row="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="1.5*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <local:HUD x:Name="hud" Grid.Column="0"/>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Grid.Column="0" Background="LightBlue" Header="连接信息" Margin="0 2 0 0">
+                        <StackPanel Orientation="Vertical">
+                            <Grid ShowGridLines="False" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Content="端口  :" HorizontalContentAlignment="Right" Grid.Row="0" Grid.Column="0"></Label>
+                                <ComboBox Name="cmbPortName" HorizontalContentAlignment="Left" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
+                                <Label Content="波特率  :" HorizontalContentAlignment="Right" Grid.Row="1" Grid.Column="0"></Label>
+                                <ComboBox Name="cmbBaud"  HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
+                                <Button Name="btnConn" Click="BtnConn_Click" Content="连接" Width="40" HorizontalAlignment="Center" Grid.Column="0"  Grid.Row="2" Grid.ColumnSpan="3"></Button>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Grid.Column="1" Background="LightBlue" Header="地图设置">
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="选择地图  :" HorizontalContentAlignment="Right" Grid.Column="0"></Label>
+                                <ComboBox Name="cmbGMapChoise" Grid.Column="1" HorizontalAlignment="Stretch"></ComboBox>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="加载模式  :"  Grid.Column="0" HorizontalContentAlignment="Right"></Label>
+                                <ComboBox Name="cmbGMapModel" Grid.Column="1"></ComboBox>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Content="缩放比例  :" HorizontalContentAlignment="Right"></Label>
+                                <ComboBox Name="cmbGMapZoom" Grid.Column="1" HorizontalContentAlignment="Left"></ComboBox>
+                            </Grid>
+                            <Label Name="labLatLng" Content="坐标" Grid.Column="1"></Label>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+                <GroupBox Grid.Row="3" Background="LightBlue" Height="80">
+                    <DataGrid CanUserResizeColumns="False"  VerticalScrollBarVisibility ="Visible" HorizontalScrollBarVisibility="Auto"  CanUserAddRows="False" AutoGenerateColumns="True" Name="dgInfo"  ColumnWidth="*" AllowDrop="False" >
+                        <!--<DataGrid.Columns >
+                            <DataGridTextColumn  Header="命令"></DataGridTextColumn>
+                            <DataGridTextColumn Header="经度"></DataGridTextColumn>
+                            <DataGridTextColumn Header="维度"></DataGridTextColumn>
+                            <DataGridTextColumn Header="高度"></DataGridTextColumn>
+                            <DataGridTextColumn Header="停留时间"></DataGridTextColumn>
+                        </DataGrid.Columns>-->
+                    </DataGrid>
+                </GroupBox>
+            </Grid>
+            <Canvas Grid.Column="1" Grid.Row="1"  Name="mapCanvas">
+                <local:MapControl x:Name="MyMapControl"/>
+                <local:flyInfo x:Name="flyinfo" Canvas.Left="10"  Canvas.Top="10">
+                    <ibehavior:Interaction.Behaviors>
+                        <local:MyBehavior></local:MyBehavior>
+                    </ibehavior:Interaction.Behaviors>
+                </local:flyInfo>
+            </Canvas>
+        </Grid>
+    </Border>
+</Window>

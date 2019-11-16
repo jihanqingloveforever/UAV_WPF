@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAV_WPF", "UAV_WPF\UAV_WPF.csproj", "{B4695DA8-48A1-449B-8299-6F8712B32B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4695DA8-48A1-449B-8299-6F8712B32B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4695DA8-48A1-449B-8299-6F8712B32B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4695DA8-48A1-449B-8299-6F8712B32B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4695DA8-48A1-449B-8299-6F8712B32B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDB9CBE9-5DAA-4476-B8A3-F6BB14E0CEF7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,167 @@
+﻿<Window x:Class="UAV_WPF.MavDetailInfoForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UAV_WPF"
+        mc:Ignorable="d" Background="LightBlue"
+        Title="MavDetailInfoForm" Height="550" Width="730" MaxHeight="550" MaxWidth="730">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Background" Value="LightBlue"></Setter>
+            <Setter Property="Padding" Value="10"></Setter>
+            <Setter Property="Margin" Value="0"></Setter>
+    
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="80"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Background" Value="LightBlue"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Canvas>
+            <Label Content="飞行器类型"/>
+            <TextBlock Name="txtType" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="5"/>
+            <Label Content="传感器存在" Canvas.Top="31"/>
+            <TextBlock Name="present" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="35"/>
+            <Label Content="滚动角速度" Canvas.Top="61"/>
+            <TextBlock Name="rollspeed" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="65"/>
+            <Label Content="俯仰角速度" Canvas.Top="91"/>
+            <TextBlock Name="pitchspeed" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="95"/>
+            <Label Content="偏航角速度" Canvas.Top="121"/>
+            <TextBlock Name="yawspeed" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="125"/>
+            <Label Content="主循环负载" Canvas.Top="151"/>
+            <TextBlock Name="load" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="155"/>
+            <Label Content="当前俯仰角" Canvas.Top="181"/>
+            <TextBlock Name="nav_pitch" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="185"/>
+            <Label Content="当前指向角" Canvas.Top="211"/>
+            <TextBlock Name="nav_bearing" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="215"/>
+            <Label Content="水平速度差" Canvas.Top="241"/>
+            <TextBlock Name="xtrack_error" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="245"/>
+            <Label Content="当前滚动叫" Canvas.Top="271"/>
+            <TextBlock Name="nav_roll" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="275"/>
+            <Label Content="误差一" Canvas.Top="301"/>
+            <TextBlock Name="errors_count1" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="305"/>
+            <Label Content="误差二" Canvas.Top="331"/>
+            <TextBlock Name="errors_count2" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="335"/>
+            <Label Content="误差三" Canvas.Top="361"/>
+            <TextBlock Name="errors_count3" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="365"/>
+            <Label Content="误差四" Canvas.Top="391"/>
+            <TextBlock Name="errors_count4" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="395"/>
+            <Label Content="地面相对高度" Canvas.Top="421"/>
+            <TextBlock Name="relative_alt" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="425"/>
+            <Label Content="定位类型" Canvas.Top="451"/>
+            <TextBlock Name="fix_type" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="455"/>
+            <Label Content="丢包总计" Canvas.Top="481"/>
+            <TextBlock Name="errors_comm" TextWrapping="Wrap" Text="" Canvas.Left="90" Canvas.Top="485"/>
+
+            <Label Content="Z地速" Canvas.Left="165"/>
+            <TextBlock Name="vz" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="5"/>
+            <Label Content="X地速" Canvas.Left="165" Canvas.Top="30"/>
+            <TextBlock  Name="vx"  TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="35"/>
+            <Label Content="Y地速" Canvas.Left="165" Canvas.Top="60"/>
+            <TextBlock  Name="vy"  TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="65"/>
+            <Label Content="丢包率" Canvas.Left="165" Canvas.Top="90"/>
+            <TextBlock Name="drop_rate_comm" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="95"/>
+            <Label Content="滚动角" Canvas.Left="165" Canvas.Top="120"/>
+            <TextBlock Name="roll" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="125"/>
+            <Label Content="俯仰角" Canvas.Left="165" Canvas.Top="150"/>
+            <TextBlock Name="pitch" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="155"/>
+            <Label Content="偏航角" Canvas.Left="165" Canvas.Top="180"/>
+            <TextBlock Name="yaw" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="185"/>
+            <Label Content="时间戳" Canvas.Left="165" Canvas.Top="210"/>
+            <TextBlock Name="time_boot_ms" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="215"/>
+            <Label Content="时间戳" Canvas.Left="165" Canvas.Top="240"/>
+            <TextBlock Name="time_usec" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="245"/>
+            <Label Content="版本号" Canvas.Left="165" Canvas.Top="270"/>
+            <TextBlock Name="txtVersion" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="275"/>
+            <Label Content="高度差" Canvas.Left="165" Canvas.Top="300"/>
+            <TextBlock Name="alt_error" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="305"/>
+            <Label Content="速度差" Canvas.Left="165" Canvas.Top="330"/>
+            <TextBlock Name="aspd_error" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="335"/>
+            <Label Content="维度" Canvas.Left="165" Canvas.Top="360"/>
+            <TextBlock Name="lat" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="365"/>
+            <Label Content="经度" Canvas.Left="165" Canvas.Top="390"/>
+            <TextBlock Name="lng" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="395"/>
+            <Label Content="高度" Canvas.Left="165" Canvas.Top="420"/>
+            <TextBlock Name="alt" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="425"/>
+            <Label Content="水平" Canvas.Left="165" Canvas.Top="450"/>
+            <TextBlock Name="eph" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="455"/>
+            <Label Content="垂直" Canvas.Left="165" Canvas.Top="480"/>
+            <TextBlock Name="epv" TextWrapping="Wrap" Text="" Canvas.Left="255" Canvas.Top="485"/>
+
+
+
+
+            <Label Content="地速" Canvas.Left="330"/>
+            <TextBlock Name="vel" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="5"/>
+            <Label Content="方向" Canvas.Left="330" Canvas.Top="30"/>
+            <TextBlock Name="cog" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="35"/>
+            <Label Content="维度" Canvas.Left="330" Canvas.Top="60"/>
+            <TextBlock Name="lat1" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="65"/>
+            <Label Content="经度" Canvas.Left="330" Canvas.Top="90"/>
+            <TextBlock Name="lon" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="95"/>
+            <Label Content="罗盘" Canvas.Left="330" Canvas.Top="120"/>
+            <TextBlock Name="hdg" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="125"/>
+            <Label Content="时间" Canvas.Left="330" Canvas.Top="150"/>
+            <TextBlock Name="time_boot_ms1" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="155"/>
+            <Label Content="微妙" Canvas.Left="330" Canvas.Top="180"/>
+            <TextBlock Name="time_unix_usec" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="185"/>
+            <Label Content="毫秒" Canvas.Left="330" Canvas.Top="210"/>
+            <TextBlock Name="time_boot_ms11" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="215"/>
+            <Label Content="距离" Canvas.Left="330" Canvas.Top="240"/>
+            <TextBlock Name="wp_dist" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="245"/>
+            <Label Content="飞控型号" Canvas.Left="330" Canvas.Top="270"/>
+            <TextBlock TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="275"/>
+            <Label Content="系统模式" Canvas.Left="330" Canvas.Top="300"/>
+            <TextBlock Name="txtAutopilot" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="305"/>
+            <Label Content="用户模式" Canvas.Left="330" Canvas.Top="330"/>
+            <TextBlock Name="txtUserModel" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="335"/>
+            <Label Content="系统状态" Canvas.Left="330" Canvas.Top="360"/>
+            <TextBlock Name="txtSystemState" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="365"/>
+            <Label Content="海拔高度" Canvas.Left="330" Canvas.Top="390"/>
+            <TextBlock Name="alt1" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="395"/>
+            <Label Content="电池电压" Canvas.Left="330" Canvas.Top="420"/>
+            <TextBlock Name="voltage_battery" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="425"/>
+            <Label Content="工作电流" Canvas.Left="330" Canvas.Top="450"/>
+            <TextBlock Name="current_battery" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="455"/>
+            <Label Content="电池余量" Canvas.Left="330" Canvas.Top="480"/>
+            <TextBlock Name="battery_remaining" TextWrapping="Wrap" Text="" Canvas.Left="425" Canvas.Top="485"/>
+
+
+
+            <Label Content="目标方位" Canvas.Left="500"/>
+            <TextBlock Name="target_bearing" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="5"/>
+            <Label Content="可见卫星" Canvas.Left="500" Canvas.Top="30"/>
+            <TextBlock Name="satellites_visible" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="35"/>
+            <Label Canvas.Left="500" Canvas.Top="60">
+                <Label.Content>
+                   传感器开启
+                </Label.Content>
+            </Label>
+            <TextBlock Name="onboard_control_sensors_enabled" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="65"/>
+            <Label Content="传感器健康" Canvas.Left="500" Canvas.Top="90"/>
+            <TextBlock Name="onboard_control_sensors_health" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="95"/>
+            <Label Content="加速度X偏" Canvas.Left="500" Canvas.Top="120"/>
+            <TextBlock Name="Accel_X" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="125"/>
+            <Label Content="加速度Y偏" Canvas.Left="500" Canvas.Top="150"/>
+            <TextBlock Name="Accel_Y" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="155"/>
+            <Label Content="加速度Z偏" Canvas.Left="500" Canvas.Top="180"/>
+            <TextBlock Name="Accel_Z" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="185"/>
+            <Label Content="GPS经度" Canvas.Left="500" Canvas.Top="210"/>
+            <TextBlock Name="txtgpslng" TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="215"/>
+            <Label Content="GPS维度" Canvas.Left="500" Canvas.Top="240"/>
+            <TextBlock  Name="txtgpslat"  TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="245"/>
+            <Label Content="GPS高度" Canvas.Left="500" Canvas.Top="270"/>
+            <TextBlock  Name="txtgpsalt"  TextWrapping="Wrap" Text="" Canvas.Left="595" Canvas.Top="275"/>
+
+
+
+
+        </Canvas>
+        
+    </Grid>
+</Window>

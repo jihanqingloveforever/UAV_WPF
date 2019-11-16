@@ -1,0 +1,70 @@
+﻿<Window x:Class="UAV_WPF.FlyModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UAV_WPF"
+        mc:Ignorable="d"
+        Title="FlyModel" Height="450" Width="900">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="LightBlue" Offset="0"></GradientStop>
+            <GradientStop Color="White" Offset="0.8"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.85*"></ColumnDefinition>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+            <ColumnDefinition Width="0.9*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" FontSize="30" Grid.Column="0" Content="当前模式"></Label>
+        <Label Name="CurrentMode" Content="“”" Grid.Row="0" FontSize="30" Grid.Column="1" ></Label>
+        <Label Name="CurrentPWM" Grid.Row="0" FontSize="30" Grid.Column="2" Content="当前PWM"></Label>
+        <Label Grid.Row="0" FontSize="30" Grid.Column="3" Content="“”"></Label>
+        <Label Grid.Row="1" FontSize="30" Grid.Column="0" Content="飞行模式1"></Label>
+        <Label Grid.Row="2" FontSize="30" Grid.Column="0" Content="飞行模式2"></Label>
+        <Label Grid.Row="3" FontSize="30" Grid.Column="0" Content="飞行模式3"></Label>
+        <Label Grid.Row="4" FontSize="30" Grid.Column="0" Content="飞行模式4"></Label>
+        <Label Grid.Row="5" FontSize="30" Grid.Column="0" Content="飞行模式5"></Label>
+        <Label Grid.Row="6" FontSize="30" Grid.Column="0" Content="飞行模式6"></Label>
+        <ComboBox Name="FlightMode1" Grid.Row="1" Grid.Column="1" FontSize="40"></ComboBox>
+        <ComboBox Name="FlightMode2" Grid.Row="2" Grid.Column="1" FontSize="40"></ComboBox>
+        <ComboBox Name="FlightMode3" Grid.Row="3" Grid.Column="1" FontSize="40"></ComboBox>
+        <ComboBox Name="FlightMode4" Grid.Row="4" Grid.Column="1" FontSize="40"></ComboBox>
+        <ComboBox Name="FlightMode5" Grid.Row="5" Grid.Column="1" FontSize="40"></ComboBox>
+        <ComboBox Name="FlightMode6" Grid.Row="6" Grid.Column="1" FontSize="40"></ComboBox>
+        <CheckBox Name="Cb_simple1" Grid.Row="1" Grid.Column="2" Content="简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_simple2" Grid.Row="2" Grid.Column="2" Content="简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_simple3" Grid.Row="3" Grid.Column="2" Content="简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_simple4" Grid.Row="4" Grid.Column="2" Content="简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_simple5" Grid.Row="5" Grid.Column="2" Content="简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_simple6" Grid.Row="6" Grid.Column="2" Content="简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_ss1" Grid.Row="1" Grid.Column="3" Content="超简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_ss2" Grid.Row="2" Grid.Column="3" Content="超简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_ss3" Grid.Row="3" Grid.Column="3" Content="超简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_ss4" Grid.Row="4" Grid.Column="3" Content="超简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_ss5" Grid.Row="5" Grid.Column="3" Content="超简单模式" FontSize="30"></CheckBox>
+        <CheckBox Name="Cb_ss6" Grid.Row="6" Grid.Column="3" Content="超简单模式" FontSize="30"></CheckBox>
+
+        <Label Grid.Row="1" Grid.Column="4" Content="PWM 0-1230" FontSize="30"></Label>
+        <Label Grid.Row="2" Grid.Column="4" Content="PWM 1231-1360" FontSize="30"></Label>
+        <Label Grid.Row="3" Grid.Column="4" Content="PWM 1361-1490" FontSize="30"></Label>
+        <Label Grid.Row="4" Grid.Column="4" Content="PWM 1491-1620" FontSize="30"></Label>
+        <Label Grid.Row="5" Grid.Column="4" Content="PWM 1621-1749" FontSize="30"></Label>
+        <Label Grid.Row="6" Grid.Column="4" Content="PWM 1750+" FontSize="30"></Label>
+        <Button Name="SaveModes" Click="SaveModes_Click" Grid.ColumnSpan="5" Grid.Row="7" Width="150" Content="保存模式" FontSize="30"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="UAV_WPF.ConfigAccelerometerCalibration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UAV_WPF"
+        mc:Ignorable="d"
+        Title="ConfigAccelerometerCalibration" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions></Grid.RowDefinitions>
+        <Image Grid.Column="0" Name="ShowImage" Source="Images\0180480001.jpg"></Image>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Canvas Grid.Row="0">
+                <Label Canvas.Left="93" Width="221" Height="100" Canvas.Top="22" Name="lbAccel">
+                    <TextBlock TextWrapping="Wrap" Height="80" >
+                    水平放置您的自驾仪，
+                    设置加速度计的默认最小/最大值。
+                    这会要求您将自驾仪的每一面都放置一次。</TextBlock>
+                </Label>
+                <Button  Name="btnCalibrationAccel" Click="BtnCalibrationAccel_Click" Canvas.Left="138" Canvas.Top="118">校准加速度计</Button>
+            </Canvas>
+            <Canvas Grid.Row="1">
+                <Label Name="label1" Canvas.Left="93" Width="221" Height="100" Canvas.Top="22">
+                    <TextBlock TextWrapping="Wrap">
+                        水平放置您的自驾仪，设置加速度计的默认偏移，这需要您将自驾仪放置在水平的平面上。
+                    </TextBlock>
+                </Label>
+                <Button Name="btnCalibrationLevel" Click="BtnCalibrationLevel_Click" Canvas.Left="138" Canvas.Top="118">校准水平</Button>
+            </Canvas>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="UAV_WPF.SetLandAltForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UAV_WPF"
+        mc:Ignorable="d"
+        Title="降落高度" Height="300" Width="530">
+    <Grid>
+        <Canvas>
+            <Label Content="降落高度" FontSize="40" Canvas.Top="90" Canvas.Left="30"></Label>
+            <TextBox Name="tbHeigh" Text="2" FontSize="40" Canvas.Top="90" Canvas.Left="220" Width="90" HorizontalContentAlignment="Center" BorderThickness="3"></TextBox>
+            <Button Name="btnOk" Content="确定" FontSize="40" Canvas.Top="90" Canvas.Left="350"></Button>
+        </Canvas>
+        
+        
+    </Grid>
+</Window>
